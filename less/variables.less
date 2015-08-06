@@ -1,0 +1,58 @@
+@screen--mobile: 320px;
+@screen--small: 700px;
+@screen--small-x: 1000px;
+@screen--medium: 1200px;
+@screen--lg: 1440px;
+
+@grey--600: #757575;
+@grey--300: #e0e0e0;
+@grey--200: #eee;
+@grey--50: #fafafa;
+@grey--bkg: #f2f2f2; // f2f2f2
+
+/* Dark text on light backgrounds */
+@text--main: rgba(0, 0, 0, .87);
+@text--secondary: rgba(0, 0, 0, .54);
+@text--hints:  rgba(0, 0, 0, .87);
+@text--dividers:  rgba(0, 0, 0, .12);
+
+/* White text on dark backgrounds */
+/*
+@text--main: rgba(255, 255, 255, 1);
+@text--secondary: rgba(255, 255, 255, .7);
+@text--hints:  rgba(255, 255, 255, .3);
+@text--dividers:  rgba(255, 255, 255, .12);
+*/
+
+@primary: #44a099; // #50bfb6; 
+@primary--light: desaturate(lighten(@primary, 20),10); //#80cbc4;
+@primary--dark: darken(@primary, 10); // #00796b;
+
+@font-family: 'Roboto', sans-serif;
+
+@font-size: 1.6rem;
+@font-size--big: 1.8rem;
+@font-size--h3: @font-size + .2;
+@font-size--h2: @font-size + 1.2;
+@font-size--h1: @font-size + 5;
+@font-size--menu: 1.6rem;
+
+@line-height: 28;
+
+/* 
+Complementary Color Scheme 
+@base: #663333;
+@complement1: spin(@base, 180);
+@complement2: darken(spin(@base, 180), 5%);
+@lighten1: lighten(@base, 15%);
+@lighten2: lighten(@base, 30%);
+*/
+
+/* 
+Subtle Color Scheme 
+@base: #663333;
+@lighter1: lighten(spin(@base, 5), 10%);
+@lighter2: lighten(spin(@base, 10), 20%);
+@darker1: darken(spin(@base, -5), 10%);
+@darker2: darken(spin(@base, -10), 20%); 
+*/
