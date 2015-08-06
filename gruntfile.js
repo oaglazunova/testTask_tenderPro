@@ -49,18 +49,6 @@ module.exports = function(grunt) {
       },
     },
 	
-	cssnano: {
-        options: {
-            sourcemap: true
-        },
-        dist: {
-            files: {
-                'css/app.css': 'css/style.css'
-            }
-        }
-    }
-
-  
 
   });
 
@@ -75,7 +63,6 @@ module.exports = function(grunt) {
     'less',
     'autoprefixer',
     'cmq',
-	'cssnano',
   ]);
   
 };
