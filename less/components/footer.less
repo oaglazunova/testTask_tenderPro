@@ -1,3 +1,55 @@
-.page-footer {
-  
+.footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: @footer-height; //! - sine qua non
+  padding: 5px 5px;
+  margin: 0 0 5px;
+  position: absolute; //! - sine qua non
+  bottom: 0px; //! - sine qua non
+  left: 0px; //! - sine qua non
+  background: linear-gradient(to bottom, #fedf52 0, #fee973 50%, #faf4a5 100%);
+  border-radius: 5px;
+  border: 1px solid #fff0af;
+  border-bottom: 1px solid #aaa;
+  box-shadow: 0 5px 15px -5px #aaa;
+  .footer-text;
+  &__left {
+    //  width: 300px;
+    padding: 0 0 0 50px;
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 46px;
+      height: 35px;
+      content: '';
+      background: url("../img/footer_arrows.png") 0 0 no-repeat;
+    }
+  }
+  &__text {
+    display: block;
+    & a {
+      .footer-text;
+    }
+  }
+  &__right {
+    padding: 8px 0;
+    .footer__text {
+      display: inline;
+      padding: 0 5px 0 0;
+      text-decoration: underline;
+      position: relative;
+      &::before {
+        position: absolute;
+        top: 0;
+        left: -18px;
+        width: 15px;
+        height: 15px;
+        content: '';
+        background: url("../img/lock_01.png") 0 0 no-repeat;
+      }
+    }
+  }
 }

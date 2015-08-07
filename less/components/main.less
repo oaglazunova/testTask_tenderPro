@@ -1,5 +1,6 @@
 html,
 body {
+  height: 100%; //! - sine qua non
   margin: 0;
   padding: 0;
 }
@@ -18,7 +19,7 @@ html {
 }
 
 body {
-  font-color: @text--main;
+  font-color: @text;
   font-size: @font-size;
   font-family: @font-family;
   background: #fff;
@@ -27,16 +28,47 @@ body {
 .body-wrapper {
   width: 1244px;
   margin: 0 auto;
+  min-height: 100%; //! - sine qua non
+position: relative; //! - sine qua non
 }
 
 .btn {
   background: linear-gradient(to bottom, #f4cbb3 0, #be4300 60%, #be4300 70%, #df6928 100%);
   color: #fff;
   text-shadow: none;
+  border: 1px solid #be4300;
   &:hover {
     background: #be4300;
     color: #fff;
     text-shadow: none;
+    
+  border: 1px solid #be4300;
+  }
+  &:focus {
+    background: linear-gradient(to bottom, #f4cbb3 0, #be4300 60%, #be4300 70%, #df6928 100%);
+  color: #fff;
+  text-shadow: none;
+    
+  border: 1px solid #be4300;
+  }
+  &:active {
+    background: linear-gradient(to bottom, #f4cbb3 0, #be4300 60%, #be4300 70%, #df6928 100%);
+  color: #fff;
+  text-shadow: none;
+    
+  border: 1px solid #be4300;
   }
   
+}
+
+.content {
+  padding-bottom: @footer-height; //! - sine qua non
+}
+
+.text {
+  font-size: @font-size;
+  color: #000;
+  &--accent {
+    color: @text--accent;
+  }
 }

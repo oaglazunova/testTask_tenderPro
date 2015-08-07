@@ -6,7 +6,11 @@
 
 
 
-@text--main: #000;
+@text: #000;
+@text--accent: #d90d15;
+@text--accent--dark: #a00006;
+
+
 @text--secondary: rgba(0, 0, 0, .54);
 @text--hints:  rgba(0, 0, 0, .87);
 @text--dividers:  rgba(0, 0, 0, .12);
@@ -20,6 +24,9 @@
 @font-family: Tahoma, Helvetica, sans-serif;
 
 @font-size: 1.2rem;
+@font-size--xs: .9rem;
+@font-size--sm: 1rem;
+@font-size--m: 1.3rem;
 
 @font-size--big: 1.8rem;
 @font-size--h3: @font-size + .2;
@@ -29,20 +36,4 @@
 
 @line-height: 28;
 
-/* 
-Complementary Color Scheme 
-@base: #663333;
-@complement1: spin(@base, 180);
-@complement2: darken(spin(@base, 180), 5%);
-@lighten1: lighten(@base, 15%);
-@lighten2: lighten(@base, 30%);
-*/
-
-/* 
-Subtle Color Scheme 
-@base: #663333;
-@lighter1: lighten(spin(@base, 5), 10%);
-@lighter2: lighten(spin(@base, 10), 20%);
-@darker1: darken(spin(@base, -5), 10%);
-@darker2: darken(spin(@base, -10), 20%); 
-*/
+@footer-height: 50px;
