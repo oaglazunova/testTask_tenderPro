@@ -11,18 +11,34 @@
   clear: both;
 }
 
-/* Fixed full-page background */
-
-.fixed-bkg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
-}
-
 .footer-text {
   font-size: @font-size--sm;
   color: @text--accent--dark;
   line-height: 1.2rem;
+}
+
+.flag-icon {
+  display: inline-block;
+  width: 16px;
+  height: 11px;
+  position: absolute;
+  content: '';
+  background: url('../img/flags_matrix.png') no-repeat;
+  background-position: -288px -231px;
+  left: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.grey-gradient {
+  
+  background: linear-gradient(to bottom, #cfcfcf 0, #fff 100%);
+}
+
+.btn {
+  background: linear-gradient(to bottom, #f4cbb3 0, #be4300 60%, #be4300 70%, #df6928 100%);
+  color: #fff;
+  text-shadow: none;
+    
+  border: 1px solid #be4300;
 }

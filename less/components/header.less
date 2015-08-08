@@ -2,65 +2,86 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 5px 3px; 
-  background: linear-gradient(to bottom, #cfcfcf 0, #fff 100%);
+  padding: 5px 3px 2px;
+  margin: 0 0 10px;
+  .grey-gradient;
   border: 1px solid #fff;
   border-bottom: 1px solid #aaa;
-  border-radius: 5px;
-  background-size: contain;
-  // overflow: hidden;
-  box-shadow: 0 5px 15px -5px #aaa;
+  border-radius: @border-radius;
+    box-shadow: 0 0 5px 0 #ccc;
+  &__logo {
+    display: block;
+    width: 215px;
+    height: 66px;
+    margin: 0 10px;
+  }
+  &__navigation {
+    width: 998px;
+  }
   &__upper {
     display: flex;
     align-items: center;
-        justify-content: space-between;
-    margin: 0 0 7px;
-  }
-  &__main {
-    & .text--accent {
-      padding: 0 20px 0;
-      text-decoration: underline;
-      &:first-child {
-        padding: 0 20px 0 10px;
-      }
-    }
+    justify-content: space-between;
+    margin: 0 0 5px;
   }
   &__dropdown {
     display: inline;
+    & .dropdown-toggle {
+      position: relative;
+      padding: 0 20px 0 30px;
+      text-decoration: underline;
+      transform-style: preserve-3d;
+      &:hover, &:focus {
+        text-decoration: none;
+        color: @text--accent;
+      }
+      &::before {
+        .flag-icon;
+      }
+    }
     & .dropdown-menu {
-      min-width: 60px;
-      padding: 3px 0;
+      min-width: 50px;
+      padding: 0;
       margin: 0;
-      font-size: @font-size; 
-  background: linear-gradient(to bottom, #cfcfcf 0, #fff 100%);
-      background-size: contain;
+      font-size: @font-size;
+     .grey-gradient;
+      top: 0;
+      transform-style: preserve-3d;
       & li {
+        position: relative;
         & a {
-          padding: 3px 10px;
+          display: inline-block;
+          padding: 3px 7px 3px 30px;
           color: @text--accent;
+          text-decoration: underline;
+        }
+        & {
+          text-decoration: none;
+        }
+        &::before {
+          .flag-icon;
+        }
+        &:nth-child(2) {
+          &::before {
+            background-position: -336px -11px;
+          }
+        }
+        &:last-child {
+          &::before {
+            background-position: -336px -121px;
+          }
         }
       }
     }
   }
-  & .flag {
-    display: inline-block;
-    width: 16px;
-    height: 11px;
-    margin: 0 5px 0 0;
-    background: url('../img/flags_matrix.png') no-repeat;
-    overflow: hidden;
-    &--1 {
-      background-position: -288px -231px;
-    }
-    &--2 {
-      background-position: -336px -11px;
-    }
-    &--3 {
-      background-position: -336px -121px;
-    }
-  }
   &__main-item {
     position: relative;
+    padding: 0 20px 0;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+      color: @text--accent;
+    }
     &::before {
       width: 12px;
       height: 11px;
@@ -84,7 +105,7 @@
   &__login {
     background: linear-gradient(to bottom, #aaa 0, #848484 100%);
     border: 1px solid #848484;
-    border-radius: 2px;
+    border-radius: @border-radius;
   }
   &__form-inline {
     display: flex;
@@ -95,7 +116,7 @@
     & .header__input {
       width: 84px;
       height: 19px;
-      border: 1px solid #A3A3A3;
+      border: 1px solid #a3a3a3;
       color: #000;
       padding: 0 0 0 2px;
       margin: 0px;
@@ -125,21 +146,66 @@
     background: #6a6a6a;
     color: #fedc4f;
     font-size: @font-size--sm;
-    border-radius: 3px;
+    border-radius: @border-radius;
     &:hover, &:focus {
       color: #fedc4f;
       text-decoration: none;
     }
   }
   &__lower {
-    padding: 0 5px 1px 0;
+    padding: 0 8px 4px;
+    margin: 0;
     background: linear-gradient(to bottom, #fbe85b 0, #fcb12c 80%, #fcb12c 90%, #fdc673 100%);
-  }
-  &__menu {
-    padding: 0;
+    border-radius: 0;
+    & .header__menu {
+      padding: 0;
+      & li {
+        border-right: 1px solid #eee;
+        &:first-child {
+          border-left: 1px solid #eee;
+        }
+      }
+      & .menu-btn {
+        font-size: @font-size--m;
+        font-weight: bold;
+        color: @text--menu-btn;
+        text-decoration: underline;
+        padding: 2px 20px;
+        &:hover {
+          text-decoration: none;
+          color: @text--menu-btn;
+        }
+        &--active {
+          pointer-events: none;
+          background: #fff6be;
+          text-decoration: none;
+        }
+      }
+    }
   }
   &__search {
-        padding: 0;
+    padding: 0;
     margin: 0;
+    & .header__search-input {
+      border: 1px solid #A3A3A3;
+      font-size: @font-size--m;
+      color: #5e5e5e;
+      width: 926px;
+      padding: 2px 20px 2px 3px;
+      margin: 0;
+      height: 20px;
+      border-radius: 0;
+    }
+  }
+  &__clear {
+    background: url("../img/ico_find_clear.png") 0 0 no-repeat;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 1px;
+    right: -5px;
+    // visibility: hidden;
+    .hidden-text;
   }
 }
+
