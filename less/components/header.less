@@ -8,7 +8,7 @@
   border: 1px solid #fff;
   border-bottom: 1px solid #aaa;
   border-radius: @border-radius;
-    box-shadow: 0 0 5px 0 #ccc;
+  box-shadow: 0 0 5px 0 #ccc;
   &__logo {
     display: block;
     width: 215px;
@@ -23,137 +23,139 @@
     align-items: center;
     justify-content: space-between;
     margin: 0 0 5px;
-  }
-  &__dropdown {
-    display: inline;
-    & .dropdown-toggle {
-      position: relative;
-      padding: 0 20px 0 30px;
-      text-decoration: underline;
-      transform-style: preserve-3d;
-      &:hover, &:focus {
-        text-decoration: none;
-        color: @text--accent;
-      }
-      &::before {
-        .flag-icon;
-      }
-    }
-    & .dropdown-menu {
-      min-width: 50px;
-      padding: 0;
-      margin: 0;
-      font-size: @font-size;
-     .grey-gradient;
-      top: 0;
-      transform-style: preserve-3d;
-      & li {
-        position: relative;
-        & a {
-          display: inline-block;
-          padding: 3px 7px 3px 30px;
-          color: @text--accent;
+    & .main-menu {
+      & .dropdown {
+        display: inline;
+        & .dropdown-toggle {
+          position: relative;
+          padding: 0 20px 0 30px;
           text-decoration: underline;
+          transform-style: preserve-3d;
+          &:hover, &:focus {
+            text-decoration: none;
+            color: @text--accent;
+          }
+          &::before {
+            .flag-icon;
+          }
         }
-        & {
+        & .dropdown-menu {
+          min-width: 50px;
+          padding: 0;
+          margin: 0;
+          font-size: @font-size;
+          .grey-gradient;
+          top: 0;
+          transform-style: preserve-3d;
+          & li {
+            position: relative;
+            & a {
+              display: inline-block;
+              padding: 3px 7px 3px 30px;
+              color: @text--accent;
+              text-decoration: underline;
+            }
+            & {
+              text-decoration: none;
+            }
+            &::before {
+              .flag-icon;
+            }
+            &:nth-child(2) {
+              &::before {
+                background-position: -336px -11px;
+              }
+            }
+            &:last-child {
+              &::before {
+                background-position: -336px -121px;
+              }
+            }
+          }
+        }
+      }
+      &__item {
+        position: relative;
+        padding: 0 20px 0;
+        text-decoration: underline;
+        &--1 {
+          &::before {
+            background: url('../img/header_icon_home.png') 0 0 no-repeat;
+          }
+        }
+        &--2 {
+          &::before {
+            background: url('../img/header_icon_contacts.png') 0 0 no-repeat;
+          }
+        }
+        &:hover {
           text-decoration: none;
+          color: @text--accent;
         }
         &::before {
-          .flag-icon;
-        }
-        &:nth-child(2) {
-          &::before {
-            background-position: -336px -11px;
-          }
-        }
-        &:last-child {
-          &::before {
-            background-position: -336px -121px;
-          }
+          width: 12px;
+          height: 11px;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          content: '';
         }
       }
     }
   }
-  &__main-item {
-    position: relative;
-    padding: 0 20px 0;
-    text-decoration: underline;
-    &:hover {
-      text-decoration: none;
-      color: @text--accent;
-    }
-    &::before {
-      width: 12px;
-      height: 11px;
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-      content: '';
-    }
-    &--1 {
-      &::before {
-        background: url('../img/header_icon_home.png') 0 0 no-repeat;
-      }
-    }
-    &--2 {
-      &::before {
-        background: url('../img/header_icon_contacts.png') 0 0 no-repeat;
-      }
-    }
-  }
-  &__login {
+  & .login {
     background: linear-gradient(to bottom, #aaa 0, #848484 100%);
     border: 1px solid #848484;
     border-radius: @border-radius;
-  }
-  &__form-inline {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
-    padding: 2px 4px 2px 10px;
-    & .header__input {
+    &__form {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      align-items: center;
+      padding: 2px 4px 2px 10px;
+    }
+    &__input {
       width: 84px;
       height: 19px;
-      border: 1px solid #a3a3a3;
-      color: #000;
       padding: 0 0 0 2px;
       margin: 0px;
+      color: #000;
       font-size: @font-size--m;
       border-radius: 0;
+      border: 1px solid #a3a3a3;
     }
-  }
-  &__label {
-    margin: 0 5px 0 0;
-    color: #fff;
-    font-weight: normal;
-  }
-  &__btn-enter {
-    padding: 0 5px;
-    margin: 0 10px;
-  }
-  &__support {
-    margin: 0 7px 0 0;
-    font-size: @font-size--xs;
-    & a {
+    &__label {
+      margin: 0 5px 0 0;
       color: #fff;
+      font-weight: normal;
     }
-  }
-  &__btn-ssl {
-    padding: 3px 6px;
-    //  margin: 0 0 5px 0;
-    background: #6a6a6a;
-    color: #fedc4f;
-    font-size: @font-size--sm;
-    border-radius: @border-radius;
-    &:hover, &:focus {
+    &__btn-enter {
+      padding: 0 5px;
+      margin: 0 10px;
+    }
+    &__support {
+      margin: 0 7px 0 0;
+      font-size: @font-size--xs;
+      & a {
+        color: #fff;
+      }
+    }
+    &__btn-ssl {
+      padding: 3px 6px;
+      //  margin: 0 0 5px 0;
+      background: #6a6a6a;
       color: #fedc4f;
-      text-decoration: none;
+      font-size: @font-size--sm;
+      border-radius: @border-radius;
+      &:hover, &:focus {
+        color: #fedc4f;
+        text-decoration: none;
+      }
     }
   }
   &__lower {
-    padding: 0 8px 4px;
+    padding: 0 7px 4px;
     margin: 0;
     background: linear-gradient(to bottom, #fbe85b 0, #fcb12c 80%, #fcb12c 90%, #fdc673 100%);
     border-radius: 0;
@@ -186,6 +188,12 @@
   &__search {
     padding: 0;
     margin: 0;
+    & .form-group {
+      position: relative;
+      & .btn {
+        margin: 0 0 0 2px;
+      }
+    }
     & .header__search-input {
       border: 1px solid #A3A3A3;
       font-size: @font-size--m;
@@ -201,11 +209,11 @@
     background: url("../img/ico_find_clear.png") 0 0 no-repeat;
     width: 16px;
     height: 16px;
-    position: absolute;
-    top: 1px;
-    right: -5px;
-    // visibility: hidden;
+    visibility: hidden;
     .hidden-text;
+    position: absolute;
+    top: 50%;
+    right: 55px;
+    transform: translateY(-50%);
   }
 }
-
