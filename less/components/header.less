@@ -9,6 +9,7 @@
   border-bottom: 1px solid #aaa;
   border-radius: @border-radius;
   box-shadow: 0 0 5px 0 #ccc;
+  
   &__logo {
     display: block;
     width: 215px;
@@ -23,15 +24,20 @@
     align-items: center;
     justify-content: space-between;
     margin: 0 0 5px;
+    
     & .main-menu {
+      
       & .dropdown {
         display: inline;
+        
         & .dropdown-toggle {
           position: relative;
           padding: 0 20px 0 30px;
           text-decoration: underline;
           transform-style: preserve-3d;
-          &:hover, &:focus {
+          
+          &:hover, 
+          &:focus {
             text-decoration: none;
             color: @text--accent;
           }
@@ -47,26 +53,27 @@
           .grey-gradient;
           top: 0;
           transform-style: preserve-3d;
+          
           & li {
             position: relative;
+            
             & a {
               display: inline-block;
               padding: 3px 7px 3px 30px;
               color: @text--accent;
               text-decoration: underline;
-            }
-            & {
-              text-decoration: none;
-            }
+            }            
             &::before {
               .flag-icon;
             }
             &:nth-child(2) {
+              
               &::before {
                 background-position: -336px -11px;
               }
             }
             &:last-child {
+              
               &::before {
                 background-position: -336px -121px;
               }
@@ -78,12 +85,15 @@
         position: relative;
         padding: 0 20px 0;
         text-decoration: underline;
+        
         &--1 {
+          
           &::before {
             background: url('../img/header_icon_home.png') 0 0 no-repeat;
           }
         }
         &--2 {
+          
           &::before {
             background: url('../img/header_icon_contacts.png') 0 0 no-repeat;
           }
@@ -108,6 +118,7 @@
     background: linear-gradient(to bottom, #aaa 0, #848484 100%);
     border: 1px solid #848484;
     border-radius: @border-radius;
+    
     &__form {
       display: flex;
       flex-wrap: nowrap;
@@ -137,13 +148,13 @@
     &__support {
       margin: 0 7px 0 0;
       font-size: @font-size--xs;
+      
       & a {
         color: #fff;
       }
     }
     &__btn-ssl {
       padding: 3px 6px;
-      //  margin: 0 0 5px 0;
       background: #6a6a6a;
       color: #fedc4f;
       font-size: @font-size--sm;
@@ -159,10 +170,13 @@
     margin: 0;
     background: linear-gradient(to bottom, #fbe85b 0, #fcb12c 80%, #fcb12c 90%, #fdc673 100%);
     border-radius: 0;
+    
     & .header__menu {
       padding: 0;
+      
       & li {
         border-right: 1px solid #eee;
+        
         &:first-child {
           border-left: 1px solid #eee;
         }
@@ -173,6 +187,7 @@
         color: @text--menu-btn;
         text-decoration: underline;
         padding: 2px 20px;
+        
         &:hover {
           text-decoration: none;
           color: @text--menu-btn;
@@ -188,6 +203,7 @@
   &__search {
     padding: 0;
     margin: 0;
+    
     & .form-group {
       position: relative;
       & .btn {
